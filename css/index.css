@@ -1,6 +1,43 @@
-h1 {
-    background-color: blanchedalmond;
+
+
+.back {
+    width:100%;
+    height:2000px;
+    background-size: cover;
+    background-image: url(../../../../Downloads/Image_20250624_002905_083.png);
+    
+   
+}
+
+.text {
     text-align: center;
-    margin: 0px 0px 0px 0px;
-    padding: 10px 10px 10px 10px;
+    font-size: 200px; 
+    color: #ed4949;
+    -webkit-text-stroke: 2px white;
+    position: relative;
+    
+    
+}
+
+.V {
+    text-align:center;
+    font-size:200px;
+    color: white;
+    position:absolute;
+    top: 900px;
+    left: 400px;
+    border-bottom:solid 3px #ffffff;
+
+}
+
+.select {
+    position: absolute;
+    top: 1200px;
+    left: 10px;
+    font-size: 100px;
+    color: white;
+}
+
+a {
+    color: #ffffff;
 }
