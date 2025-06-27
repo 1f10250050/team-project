@@ -1,0 +1,119 @@
+以下のように、さきほどのカジュアルテーブルを「オレンジ系」に丸ごとカラーチェンジする方法です。変数をいじるだけなので、好きなオレンジトーンに簡単に調整できます。
+――― styles.css ――― 
+/*---------------------------------
+  1. ベース・リセット
+---------------------------------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  background: #fff8f0;     /* ページ背景もほんのりオレンジ系に */
+  color: #333;
+}
+
+/*---------------------------------
+  2. カラーパレット（オレンジ系）
+---------------------------------*/
+:root {
+  --border-color: #f5c19e;  /* 罫線色 */
+  --table-bg:    #fff0e6;  /* テーブル全体の背景 */
+  --header-bg:   #ff8c42;  /* ヘッダー背景 */
+  --row-alt-bg:  #ffe3cc;  /* 偶数行背景 */
+  --hover-bg:    #ffd1a4;  /* ホバー時背景 */
+  --accent:      #d35400;  /* 強調文字（年など） */
+  --cell-pad:    12px 16px;/* セル内余白 */
+  --radius:      8px;      /* 角丸 */
+}
+
+/*---------------------------------
+  3. テーブルラッパー（横スクロール対応）
+---------------------------------*/
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  padding: 16px;
+}
+
+/*---------------------------------
+  4. テーブル本体
+---------------------------------*/
+.live-table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  background: var(--table-bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ヘッダー */
+.live-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--header-bg);
+  color: #fff;
+  padding: var(--cell-pad);
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: left;
+  border-bottom: 2px solid var(--border-color);
+}
+
+/* ボディセル */
+.live-table tbody td {
+  padding: var(--cell-pad);
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.95rem;
+  vertical-align: middle;
+  text-align: left;
+}
+
+/* 交互行 */
+.live-table tbody tr:nth-child(even) td {
+  background: var(--row-alt-bg);
+}
+
+/* ホバー時 */
+.live-table tbody tr:hover td {
+  background: var(--hover-bg);
+}
+
+/* 最左列（年など）をアクセントカラー太字に */
+.live-table tbody td:first-child {
+  color: var(--accent);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* 角丸調整 */
+.live-table thead th:first-child {
+  border-top-left-radius: var(--radius);
+}
+.live-table thead th:last-child {
+  border-top-right-radius: var(--radius);
+}
+.live-table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: var(--radius);
+}
+.live-table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: var(--radius);
+}
+
+h1{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+table th:last-child,
+table td:last-child {
+  display: none;
+}
