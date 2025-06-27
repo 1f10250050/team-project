@@ -117,3 +117,21 @@ table th:last-child,
 table td:last-child {
   display: none;
 }
+
+.live-table {
+  /* すでにある設定の下あたりに追記してください */
+  border: 4px solid var(--accent);   /* テーブル外周の太線 */
+  border-collapse: collapse;         /* collapse にしておくと内側の線も繋がります */
+}
+
+/* 各セルにも太めの線を */
+.live-table th,
+.live-table td {
+  /* すでに border-bottom がある場合は上書きされます */
+  border: 2px solid var(--border-color);
+}
+
+/* ヘッダー下の線はさらに強調したいなら…… */
+.live-table thead th {
+  border-bottom: 3px solid var(--accent);
+}
