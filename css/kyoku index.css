@@ -9,17 +9,26 @@ table {
     width: 100%;
 }
 
-tr {
+th {
     text-align: center;
+    background-color: orange;
 }
 
 td {
     text-align: center;
+    background-color:antiquewhite;
 }
 
 p {
     text-align: right;
 }
 
+.back {
+    background-color:aquamarine;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    padding: 35px 15px 35px 5px;
+}
 
 
