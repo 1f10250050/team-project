@@ -74,15 +74,11 @@ body {
   text-align: left;
 }
 
-/* 交互行 */
-.live-table tbody tr:nth-child(even) td {
-  background: var(--row-alt-bg);
-}
 
-/* ホバー時 */
-.live-table tbody tr:hover td {
-  background: var(--hover-bg);
-}
+
+
+
+
 
 /* 最左列（年など）をアクセントカラー太字に */
 .live-table tbody td:first-child {
