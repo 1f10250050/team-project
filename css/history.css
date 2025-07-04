@@ -135,3 +135,7 @@ table td:last-child {
 .live-table thead th {
   border-bottom: 3px solid var(--accent);
 }
+
+p.side{
+text-align: left;
+}
