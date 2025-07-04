@@ -109,10 +109,7 @@ p{
     text-align: center;
 }
 
-table th:last-child,
-table td:last-child {
-  display: none;
-}
+
 
 .live-table {
   /* すでにある設定の下あたりに追記してください */
